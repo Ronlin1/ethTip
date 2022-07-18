@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	var etherTip = ethTipElement? ethTipElement.getAttribute('content'): null;
 
     if (window.ethereum != undefined && toAddress != undefined && etherTip != undefined) {
-		var etherTipButton = document.getElementsByClassName('ethTipButton');
+		var etherTipButton = document.getElementById('ethButton');
 		etherTipButton.classList.add('active');
 		etherTipButton.addEventListener('click', (event) => {
         	connectAndSendEth(toAddress, etherTip);
